@@ -1,6 +1,6 @@
-package com.test.util;
+package com.test.util.resilience;
 
-import com.test.util.server.RequestParam;
+import com.test.util.resilience.server.RequestParam;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.vavr.CheckedFunction0;
 import io.vavr.control.Try;

@@ -1,6 +1,6 @@
-package com.test.util.server;
+package com.test.util.resilience.server;
 
-import com.test.util.ResilienceTest;
+import com.test.util.resilience.ResilienceTest;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.test.util.server;
+package com.test.util.resilience.server;
 
 /**
  * @author zhangnan
