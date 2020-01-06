@@ -23,11 +23,9 @@ public class LruMain {
 
         LoadingCache<Integer, String> graphs = CacheBuilder.newBuilder()
                 .maximumSize(1000)
-                .concurrencyLevel()
-                .maximumWeight()
-                .refreshAfterWrite()
-                .expireAfterAccess()
-                .initialCapacity()
+                .concurrencyLevel(4)
+                .maximumWeight(1000)
+                .initialCapacity(100)
                 .expireAfterWrite(10, TimeUnit.MINUTES)
                 .removalListener(removalListener)
                 .build(
@@ -38,9 +36,5 @@ public class LruMain {
                                 return String.valueOf(key);
                             }
                         });
-
-        ConcurrentLinkedHashMap map;
-        map.get();
-        map.put()
     }
 }
