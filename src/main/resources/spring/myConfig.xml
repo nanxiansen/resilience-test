@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="myEvent" class="com.test.util.spring.event.MyEvent"/>
+    <bean id="myEventManager" class="com.test.util.spring.event.MyEventManager"/>
+    <bean id="myEventListener" class="com.test.util.spring.event.MyEventListener"/>
+</beans>
