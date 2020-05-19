@@ -1,4 +1,4 @@
-package com.test.util.resilience;
+package com.test.util.resilience.resilience4j;
 
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;

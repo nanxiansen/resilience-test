@@ -1,4 +1,4 @@
-package com.test.util.resilience;
+package com.test.util.resilience.resilience4j;
 
 import com.test.util.resilience.server.RequestParam;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
@@ -9,19 +9,19 @@ import io.vavr.control.Try;
  * @author zhangnan
  * @date 2019/08/06 20:45
  */
-public class ResilienceTest {
+public class Resilience4jService {
 
     private static final String DEFAULT_RESULT = "default_result";
 
-    private static final ResilienceTest RESILIENCE_TEST = new ResilienceTest();
+    private static final Resilience4jService RESILIENCE_TEST = new Resilience4jService();
 
     private CircuitBreaker breaker = CircuitBreakerManager.getInstance().getCircuitBreaker("resilience_test");
 
-    public static ResilienceTest getInstance() {
+    public static Resilience4jService getInstance() {
         return RESILIENCE_TEST;
     }
 
-    public String testResilience(RequestParam param) {
+    public String serve(RequestParam param) {
         for (int i = 0; i < 1; i++) {
             test(param);
         }

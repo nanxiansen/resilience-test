@@ -1,6 +1,6 @@
 package com.test.util.resilience.server;
 
-import com.test.util.resilience.ResilienceTest;
+import com.test.util.resilience.resilience4j.Resilience4jService;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +21,7 @@ public class TestServlet extends HttpServlet {
         RequestParam param = buildParam(request);
 
         try {
-            response.getWriter().println(ResilienceTest.getInstance().testResilience(param));
+            response.getWriter().println(Resilience4jService.getInstance().serve(param));
         } catch (IOException e) {
             e.printStackTrace();
         }

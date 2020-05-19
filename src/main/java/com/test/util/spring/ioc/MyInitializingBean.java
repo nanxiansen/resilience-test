@@ -12,5 +12,6 @@ public class MyInitializingBean implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("afterPropertiesSet");
+        throw new NullPointerException();
     }
 }
